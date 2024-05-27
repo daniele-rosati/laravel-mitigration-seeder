@@ -23,10 +23,10 @@ class TrainsTableSeeder extends Seeder
             $newTrain -> company = $faker->company();
             $newTrain -> departure_station = $faker -> randomElement(['Roma', 'Milano', 'Napoli', 'Bari']);
             $newTrain -> arrival_station = $faker -> randomElement(['Bologna','Firenze', 'Reggio Calabria', 'Ancona']);
-            $newTrain -> daparture_datetime = $faker -> dateTimeBetween(today(), '+2 day');
-            $newTrain -> arrival_detetime = $faker -> dateTimeBetween(today(), '+2 day');
-            $newTrain -> train_code ='AB' . $faker -> randomDigit();
-            $newTrain -> wagons_number = $faker -> numberBetween(5, 12);
+            $newTrain -> departure_datetime = $faker -> dateTimeBetween(today(), '+2 day');
+            $newTrain -> arrival_datetime = $faker -> dateTimeBetween(today(), '+2 day');
+            $newTrain -> trian_code ='AB' . $faker -> randomDigit();
+            $newTrain -> wagon_number = $faker -> numberBetween(5, 12);
             $newTrain -> on_time = $faker -> boolean();
             $newTrain -> cancelled = $faker -> boolean();
             $newTrain -> save();
